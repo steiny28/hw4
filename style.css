@@ -1,0 +1,170 @@
+/*
+File: style.css 
+GUI Assignment: Dynamic Multiplication Table 
+Nicole Ramirez, UMass Lowell Computer Science, nicole_ramirez@student.uml.edu 
+Copyright (c) 2024 by Nicole Ramirez. All rights reserved. May be freely copied or 
+excerpted for educational purposes with credit to the author. 
+*/
+
+/* Body: Center content, set font and background color */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1d1e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container: Style the main box */
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1000px;
+    overflow: hidden;
+}
+
+/* Header: Center text */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Form: Arrange inputs vertically */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Labels: Add margin and color */
+label {
+    margin-top: 10px;
+    color: #555;
+}
+
+/* Inputs: Style form fields */
+input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Button: Style and add hover effect */
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Error message: Style text */
+#errorMessage {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Table container: Enable scrolling */
+#tableContainer {
+    overflow: auto;
+    max-height: 400px;
+    margin-top: 20px;
+    border: 1px solid #bbc9e9;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #89ccda;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Table wrapper: Enable scrolling */
+.table-wrapper {
+    overflow: auto;
+    max-height: 400px;
+}
+
+/* Table: Full width and collapse borders */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    table-layout: auto;
+}
+
+/* Table headers and cells: Style */
+th, td {
+    padding: 12px;
+    border: 1px solid #89ccda;
+    text-align: center;
+    font-size: 16px;
+    word-wrap: break-word;
+    min-width: 50px; 
+}
+
+/* Table headers: Style and make sticky */
+th {
+    background-color: #fb7279; 
+    color: #000;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+/* First column headers: Make sticky */
+th:first-child {
+    left: 0;
+    z-index: 3;
+}
+
+/* Alternate row colors */
+tr:nth-child(even) {
+    background-color: #E6E6FA; 
+}
+
+tr:nth-child(odd) {
+    background-color: #FFB6C1; 
+}
+
+/* Row hover effect */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Sticky first column cells */
+th, td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: #89ccda;
+    z-index: 1;
+}
+
+/* Tabs navigation: Allow scrolling */
+.ui-tabs .ui-tabs-nav {
+    overflow: auto;
+}
+
+/* Tabs list items: Style */
+.ui-tabs .ui-tabs-nav li {
+    float: left;
+    position: relative;
+}
+
+/* Close icon on tabs: Style */
+.ui-tabs .ui-tabs-nav li .ui-icon-close {
+    float: right;
+    cursor: pointer;
+}
